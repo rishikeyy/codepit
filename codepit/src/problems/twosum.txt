@@ -1,0 +1,9 @@
+2 sum
+
+Write a Program to add two numbers.
+
+sample Input:
+4 5
+
+sample output:
+9
