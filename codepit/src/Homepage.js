@@ -6,6 +6,11 @@ function Homepage(){
     <div>
     <Navbar/>
     <HomepageContent/>
+    <Routes>
+        <Route path="/Home" element={<HomepageContent/>}/>
+        <Route path="/LeaderBoard" element={<LeaderBoard/>}/>
+        <Route path="/ProblemList" element={<ProblemList/>}/>
+    </Routes>
     </div>
     )
 } 
