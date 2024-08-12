@@ -1,6 +1,13 @@
 import React from 'react';
 import Navbar from './Navbar/Navbar.js'
 import HomepageContent from './HomepageContent.js'
+
+var problemData;
+// useEffect(()=>{
+//     //axios for fetching problem
+//     },[]);
+    
+
 function Homepage(){
     return (
     <div>

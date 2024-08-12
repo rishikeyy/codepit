@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-//require.context()
+
 
 
   
 function Problems(){
-
+    //fetch problms from backed  along with id.
+    //iterate and make table of problems and on click fire fuction  for render of probAndEditor.js 
     const [markDown,setMarkDown] = useState("")
 
-
+    
     useEffect(() => {
         
 
