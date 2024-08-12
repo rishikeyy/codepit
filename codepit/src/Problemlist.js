@@ -4,7 +4,7 @@ import Problems from './problems.js'
 function ProblemList() {
   return (
     <>
-    {/* <Navbar/> */}
+     <Navbar/> 
     <Problems/>
   </>
   );
