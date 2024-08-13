@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import axios, {isCancel, AxiosError} from 'axios';
 
 
 
-
-function problems(problemID){
+function Problems(problemID){
     const [data,dataSetter]=useState();
     useEffect(()=>{
         var fetch=async ()=>{
@@ -15,18 +15,18 @@ function problems(problemID){
                 console.log(e)
             }
         }
-        response();
+        fetch();
     
     },[])
     return(
         //parse data and return it in a jsx format
         <>
-        
+        <div></div>
         </>
     )
     }
     
-    export default problems
+    export default Problems
 
   
 // function Problems(){

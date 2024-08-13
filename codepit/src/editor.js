@@ -6,8 +6,9 @@ function editor({sampleInputs,expectedOutputs}){
     const [outputArr,outputArrSetter]=useState([])
     const [compileResult,compileResultSetter]=useState('')
     var resultCnt=0;
-    const resultEleFlag=0;
-    
+    const resultEleFlag=0;  // activates when submission button is hit and result element to be shown.
+    const failed=0;
+
     const handleChange=(event)=>{
     handletext(event.target.value)
     }
@@ -19,7 +20,7 @@ function editor({sampleInputs,expectedOutputs}){
     compileResultSetter('');
     resultCnt=0;
     resultEleFlag=0;
-    
+    failed=0;
     
     
     sampleInputs.forEach((inp)=>{
@@ -44,6 +45,7 @@ function editor({sampleInputs,expectedOutputs}){
     if(outputArr[i].output==expectedOutputs[i])resultCnt++;
     else{
     compileResultSetter(outputArr[i].output);
+    failed=1;
     break;
     }
     }
@@ -71,7 +73,8 @@ function editor({sampleInputs,expectedOutputs}){
     <button type="submit" onClick={handleClick}>Submit</button>
     </div>
     </form>
-    {resultEleFlag && <div>Failed on Testcase: {resultCnt+1}  '\n' {compileResult}</div>}
+    {failed && resultEleFlag && <div>Failed on Testcase: {resultCnt+1}  '\n' {compileResult}</div>}
+    {!failed && resultEleFlag && <div> '\n' {compileResult}</div>}
     </>
     )
     }
